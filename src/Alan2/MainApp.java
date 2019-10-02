@@ -22,7 +22,7 @@ public class MainApp extends Application {
     private AnchorPane rootLayout;
     
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         try {
             stage = primaryStage;
             FXMLLoader loader = new FXMLLoader();
