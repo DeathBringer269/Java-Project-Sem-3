@@ -1,6 +1,6 @@
 # Semester 3 Java Project
 
-##IMPORTANT NOTE TO CONTRIBUTORS  
+## IMPORTANT NOTE TO CONTRIBUTORS  
 	@sujoydchuna  
 		teacher sa database hai tyat student data display karun de  
 		ani student sa database hai tyat student sa name and id jyan login kelai  
