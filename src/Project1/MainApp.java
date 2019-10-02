@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Alan2;
+package Project1;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -26,7 +26,7 @@ public class MainApp extends Application {
         try {
             stage = primaryStage;
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("fxmlfiles/login.fxml"));
+            loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
             rootLayout = (AnchorPane) loader.load();
 
             Scene scene = new Scene(rootLayout);

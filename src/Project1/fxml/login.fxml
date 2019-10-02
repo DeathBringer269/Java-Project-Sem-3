@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="root" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Alan2.controllerfiles.LoginController">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Project1.controller.LoginController">
     <stylesheets>
-        <URL value="@/Alan2/cssfiles/login.css" />
+        <URL value="@/Project1/css/login.css" />
     </stylesheets>
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="50.0" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" spacing="10.0">
