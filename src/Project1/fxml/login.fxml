@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="root" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Project1.controller.LoginController">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project1.controller.LoginController">
     <stylesheets>
         <URL value="@/Project1/css/login.css" />
     </stylesheets>
@@ -25,13 +25,14 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="24.0" prefWidth="260.0" spacing="10.0">
                <children>
-                  <Button fx:id="teacherbutton" alignment="CENTER" mnemonicParsing="false" text="Teacher" />
-                  <Button fx:id="studentbutton" alignment="CENTER" mnemonicParsing="false" text="Student" />
+                  <Button fx:id="teacherbutton" alignment="CENTER" mnemonicParsing="false" onAction="#onSetTeacher" text="Teacher" />
+                  <Button fx:id="studentbutton" alignment="CENTER" mnemonicParsing="false" onAction="#onSetStudent" text="Student" />
                </children>
             </HBox>
+            <Label fx:id="errorprompt" prefHeight="5.0" prefWidth="300.0" />
             <TextField fx:id="username" promptText="Username" />
             <PasswordField fx:id="password" promptText="Password" />
-            <Button fx:id="loginbutton" mnemonicParsing="false" text="login" />
+            <Button fx:id="loginbutton" mnemonicParsing="false" onAction="#onLogin" text="login" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

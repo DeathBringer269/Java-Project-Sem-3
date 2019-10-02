@@ -20,11 +20,14 @@ public class MainApp extends Application {
     
     public static Stage stage;
     private AnchorPane rootLayout;
+    public static String s;
     
     @Override
     public void start(Stage primaryStage) {
         try {
             stage = primaryStage;
+            s = "Hello";
+            
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
             rootLayout = (AnchorPane) loader.load();
