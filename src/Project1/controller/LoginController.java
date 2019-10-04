@@ -7,6 +7,7 @@ package Project1.controller;
 
 import Project1.MainApp;
 import java.io.IOException;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
@@ -90,7 +91,8 @@ public class LoginController {
             //FXMLLoader loader = new FXMLLoader();
             //loader.setLocation(MainApp.class.getResource("fxml/teacher1.fxml"));
             //root = (AnchorPane) loader.load();
-            Parent root = FXMLLoader.load(getClass().getResource("/Project1/fxml/teacher1.fxml"));
+            URL url = getClass().getResource("/Project1/fxml/teacher1.fxml");
+            Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root);
             stage.setTitle("Teacher Home Page");
             stage.setScene(scene);
@@ -108,8 +110,8 @@ public class LoginController {
             //FXMLLoader loader = new FXMLLoader();
             //loader.setLocation(MainApp.class.getResource("fxml/student1.fxml"));
             //root = (AnchorPane) loader.load();
-            Parent root = FXMLLoader.load(getClass().getResource("/Project1/fxml/student1.fxml"));
-            
+            URL url = getClass().getResource("/Project1/fxml/student1.fxml");
+            Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root);
             stage.setTitle("Student Home Page");
             stage.setScene(scene);

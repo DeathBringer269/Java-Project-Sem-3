@@ -6,6 +6,7 @@
 package Project1;
 
 import java.io.IOException;
+import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,7 +33,8 @@ public class MainApp extends Application {
             //FXMLLoader loader = new FXMLLoader();
            // loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
             //rootLayout = (AnchorPane) loader.load();
-            Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
+            URL url = getClass().getResource("fxml/login.fxml");
+            Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root);
             stage.setTitle("ERP");
             stage.setScene(scene);
