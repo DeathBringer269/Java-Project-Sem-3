@@ -32,8 +32,7 @@ public class MainApp extends Application {
             //FXMLLoader loader = new FXMLLoader();
            // loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
             //rootLayout = (AnchorPane) loader.load();
-            Parent root = FXMLLoader.load(getClass()
-				.getResource("fxml/login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
             Scene scene = new Scene(root);
             stage.setTitle("ERP");
             stage.setScene(scene);
