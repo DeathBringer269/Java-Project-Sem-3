@@ -8,6 +8,7 @@ package Project1;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -28,11 +29,12 @@ public class MainApp extends Application {
             stage = primaryStage;
             s = "Hello";
             
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
-            rootLayout = (AnchorPane) loader.load();
-
-            Scene scene = new Scene(rootLayout);
+            //FXMLLoader loader = new FXMLLoader();
+           // loader.setLocation(MainApp.class.getResource("fxml/login.fxml"));
+            //rootLayout = (AnchorPane) loader.load();
+            Parent root = FXMLLoader.load(getClass()
+				.getResource("fxml/login.fxml"));
+            Scene scene = new Scene(root);
             stage.setTitle("ERP");
             stage.setScene(scene);
             stage.show();

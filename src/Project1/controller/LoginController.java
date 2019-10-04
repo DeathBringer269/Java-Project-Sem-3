@@ -12,12 +12,12 @@ import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -27,8 +27,8 @@ import javafx.stage.Stage;
  */
 public class LoginController {
     
-    @FXML
-    private AnchorPane root;
+    //@FXML
+    //private AnchorPane root;
     
     @FXML
     private Button teacherbutton;
@@ -87,9 +87,10 @@ public class LoginController {
     void setSceneTeacher() {
         try {
             Stage stage = MainApp.stage;
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("fxml/teacher1.fxml"));
-            root = (AnchorPane) loader.load();
+            //FXMLLoader loader = new FXMLLoader();
+            //loader.setLocation(MainApp.class.getResource("fxml/teacher1.fxml"));
+            //root = (AnchorPane) loader.load();
+            Parent root = FXMLLoader.load(getClass().getResource("/Project1/fxml/teacher1.fxml"));
             Scene scene = new Scene(root);
             stage.setTitle("Teacher Home Page");
             stage.setScene(scene);
@@ -104,9 +105,11 @@ public class LoginController {
         System.out.print("Entered method setSceneStudent");
         try {
             Stage stage = MainApp.stage;
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("fxml/student1.fxml"));
-            root = (AnchorPane) loader.load();
+            //FXMLLoader loader = new FXMLLoader();
+            //loader.setLocation(MainApp.class.getResource("fxml/student1.fxml"));
+            //root = (AnchorPane) loader.load();
+            Parent root = FXMLLoader.load(getClass().getResource("/Project1/fxml/student1.fxml"));
+            
             Scene scene = new Scene(root);
             stage.setTitle("Student Home Page");
             stage.setScene(scene);
