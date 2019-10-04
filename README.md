@@ -2,9 +2,7 @@
 
 ## IMPORTANT NOTE TO CONTRIBUTORS  
 	@sujoydchuna  
-		teacher sa database hai tyat student data display karun de  
-		ani student sa database hai tyat student sa name and id jyan login kelai  
-		tavda kar mag udya kai karasai te discuss karu  
+		Tun je mana database sa karala hangtile te mi Project2 mada karte
 
 ## Getting Started
 
