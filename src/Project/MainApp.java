@@ -26,24 +26,32 @@ public class MainApp extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        try {
             stage = primaryStage;
             //Setting home scene
-            URL url = getClass().getResource("fxml/home.fxml");
-            Parent root = FXMLLoader.load(url);
-            Scene scene = new Scene(root);
-            
+            //System.out.println("IN HERE");
+            Scene scene = setHomePage();
+            //System.out.println("IN HERE");
             stage.setTitle("ERP");
             stage.setScene(scene); 
             stage.setResizable(false);
             stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
  
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public Scene setHomePage(){
+        //System.out.println("IN HERE");
+        Scene scene = null;
+        try {
+            URL url = getClass().getResource("fxml/home.fxml");
+            Parent root = FXMLLoader.load(url);
+            scene = new Scene(root);
+        } catch (IOException ex) {
+            Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return scene;
     }
     
 }

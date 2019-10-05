@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Project.controller.LoginController">
+    <stylesheets>
+        <URL value="@/Project/css/login.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="201.0" text="Sign in to your account" textFill="BLUE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Button fx:id="teacherbutton" defaultButton="true" mnemonicParsing="false" onMouseClicked="#onSetTeacher" text="Teacher" />
+                  <Button fx:id="studentbutton" mnemonicParsing="false" onMouseClicked="#onSetStudent" text="Student" />
+               </children>
+            </HBox>
+            <Label fx:id="fielderrorlabel" maxWidth="300.0" prefWidth="300.0" textFill="RED" />
+            <TextField fx:id="username" maxWidth="300.0" promptText="Username" />
+            <PasswordField fx:id="password" maxWidth="300.0" promptText="Password" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="6.0" visible="false" />
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="400.0" spacing="120.0">
+               <children>
+                  <Button fx:id="signinbutton" mnemonicParsing="false" onKeyPressed="#onKeyPress" onMouseClicked="#onClick" text="Sign in" />
+               </children>
+            </HBox>
+            <Separator orientation="VERTICAL" prefHeight="49.0" prefWidth="17.0" visible="false" />
+            <Label text="Display  database error message here if any" textFill="RED" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Button fx:id="backtohome" focusTraversable="false" layoutX="31.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#onClicktoBack" text="Back to home" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
