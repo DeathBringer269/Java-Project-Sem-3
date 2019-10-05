@@ -22,18 +22,22 @@ public class HomeController {
 
     @FXML
     void onClick(ActionEvent event) {
-        
-        try {
             //set login scene
-            URL url = getClass().getResource("/Project/fxml/login.fxml");
-            Parent root = FXMLLoader.load(url);
-            Scene scene = new Scene(root);
+            Scene scene = setLoginPage();
             stage.setScene(scene);
             stage.setResizable(false);
+    }
+    
+    public Scene setLoginPage() {
+        Scene scene = null;
+        try {
+            URL url = getClass().getResource("/Project/fxml/login.fxml");
+            Parent root = FXMLLoader.load(url);
+            scene = new Scene(root);
         } catch (IOException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        return scene;
     }
 
 }

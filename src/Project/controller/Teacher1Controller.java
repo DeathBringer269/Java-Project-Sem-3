@@ -1,27 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Project.controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import Project.MainApp;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Grace
- */
-public class Teacher1Controller implements Initializable {
+public class Teacher1Controller {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    Stage stage = MainApp.stage;
     
+    @FXML
+    private MenuItem logout_teacher1;
+
+    @FXML
+    void onClicklogout_teacher1(ActionEvent event) {
+        HomeController home = new HomeController();
+        Scene scene = home.setLoginPage();
+        stage.setScene(scene);
+        stage.setResizable(false);
+    }
+
 }
+
