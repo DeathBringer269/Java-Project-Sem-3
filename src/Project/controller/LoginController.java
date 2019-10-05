@@ -1,8 +1,13 @@
 package Project.controller;
 
 import Project.MainApp;
-import javafx.event.ActionEvent;
+import java.io.IOException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -56,10 +61,18 @@ public class LoginController {
             if(set == 1) {
                 //check credentials
                 //switch to teacher scene
+                Scene scene = SwitchToTeacher1();
+                stage.setScene(scene);
+                stage.setTitle("Teacher");
+                stage.setResizable(false);
             }
             else {
                 //check credentials
                 //switch to APPROPRIATE student scene
+                Scene scene = SwitchToStudent1();
+                stage.setScene(scene);
+                stage.setTitle("Student");
+                stage.setResizable(false);
             }
         }
     }
@@ -106,4 +119,28 @@ public class LoginController {
         set = 1;
     }    
     
+    
+    Scene SwitchToTeacher1() {
+        Scene scene = null;
+        try {
+            URL url = getClass().getResource("/Project/fxml/teacher1.fxml");
+            Parent root = FXMLLoader.load(url);
+            scene = new Scene(root);   
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return scene;
+    }
+    
+    Scene SwitchToStudent1() {
+        Scene scene = null;
+        try {
+            URL url = getClass().getResource("/Project/fxml/student1.fxml");
+            Parent root = FXMLLoader.load(url);
+            scene = new Scene(root);   
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return scene;
+    }
 }
