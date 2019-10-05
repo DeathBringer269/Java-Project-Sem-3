@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Project.controller.Teacher1Controller">
     <stylesheets>
         <URL value="@/Project/css/teacher1.css" />
     </stylesheets>
+   <children>
+      <MenuButton layoutX="190.0" layoutY="146.0" mnemonicParsing="false" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="hello" />
+            <MenuItem mnemonicParsing="false" text="fdas" />
+            <MenuItem mnemonicParsing="false" text="fdas" />
+            <CustomMenuItem mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <Button mnemonicParsing="false" text="Button" />
+               </content>
+            </CustomMenuItem>
+        </items>
+      </MenuButton>
+      <SplitMenuButton layoutX="289.0" layoutY="146.0" mnemonicParsing="false" text="SplitMenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+   </children>
 </AnchorPane>
