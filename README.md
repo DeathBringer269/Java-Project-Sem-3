@@ -1,10 +1,6 @@
 ### Semester 3 Java Project
 
 ## IMPORTANT NOTE TO CONTRIBUTORS  
-	@alandsilva
-		Database connection is done
-		add popup or something in controller class
-		comments vasun add kar  
 ## Getting Started
 
 No instructions yet
