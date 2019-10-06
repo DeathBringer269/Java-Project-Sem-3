@@ -1,8 +1,11 @@
-# Semester 3 Java Project
+### Semester 3 Java Project
 
 ## IMPORTANT NOTE TO CONTRIBUTORS  
-	@sujoydchuna  
-		Tun je mana database sa karala hangtile te mi Project2 mada karte
+	@alandsilva
+		Database connection is done
+		add popup or something in controller class
+		comments vasun add kar
+
 
 ## Getting Started
 
@@ -87,3 +90,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+

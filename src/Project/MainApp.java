@@ -5,6 +5,7 @@
  */
 package Project;
 
+import Connect.Connect;
 import java.io.IOException;
 import java.net.URL;
 import java.util.logging.Level;
@@ -38,6 +39,7 @@ public class MainApp extends Application {
     }
  
     public static void main(String[] args) {
+        Connect.init();
         launch(args);
     }
     
