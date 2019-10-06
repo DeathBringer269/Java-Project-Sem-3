@@ -4,9 +4,7 @@
 	@alandsilva
 		Database connection is done
 		add popup or something in controller class
-		comments vasun add kar
-
-
+		comments vasun add kar  
 ## Getting Started
 
 No instructions yet
