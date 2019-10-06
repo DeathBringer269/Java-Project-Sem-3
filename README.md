@@ -1,11 +1,7 @@
 # Semester 3 Java Project
 
 ## IMPORTANT NOTE TO CONTRIBUTORS  
-	@sujoydchuna  
-		LoginController hai bag.  
-		tyat username ani password validate karasa ani database la connect karasa code tak.  
-		bijya akhya mere comment takilyat .ani toh database not coneccted sa error ala tar tya label madda tak.   
-		ani biza kai vatla tar kar  
+	
 
 
 ## Getting Started
