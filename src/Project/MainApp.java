@@ -5,7 +5,7 @@
  */
 package Project;
 
-import Connect.Connect;
+import Project.connect.Connect;
 import java.io.IOException;
 import java.net.URL;
 import java.util.logging.Level;

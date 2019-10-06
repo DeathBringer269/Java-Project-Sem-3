@@ -1,6 +1,6 @@
 package Project.controller;
 
-import Connect.Connect;
+import Project.connect.Connect;
 import Project.MainApp;
 import java.io.IOException;
 import java.net.URL;
