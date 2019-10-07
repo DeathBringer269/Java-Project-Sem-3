@@ -26,6 +26,8 @@ import javafx.stage.Stage;
 public class LoginController {
     
     Stage stage = MainApp.stage;
+    
+    
 
     @FXML
     private Label fielderrorlabel;
@@ -53,85 +55,92 @@ public class LoginController {
 
     @FXML
     void onClick(MouseEvent event) {
-        //switch scene
+        
         int flag_check =0;
+        
         Statement stmt = null;
+        
         ResultSet rs = null;
-        Connection con = null;
+        
+        Connection conn = null;
+        
         String u = null;
+        
         String p = null;
-        String id = "ID";
-        String pasw = "Password";
-        if(username.getText().isEmpty()){
+        
+        String Username = "Username";
+        
+        String Password = "Password";
+          
+      if(username.getText().isEmpty()){
             fielderrorlabel.setText("Username cannot be empty!");
         }
         else if(password.getText().isEmpty()) {
             fielderrorlabel.setText("Password cannot be empty!");
         }
         else {
-            fielderrorlabel.setText("");
-            //connect to database
+            //checking crendentials for teacher
             if(set == 1) {
                 String usr = username.getText();
                 String pas = password.getText();
                 try {
-                    con = Connect.getConnection();
-                    stmt = con.createStatement();
-                    stmt.executeQuery("SELECT * FROM teacher" );
+                    conn = Connect.getConnection();
+                    stmt = conn.createStatement();
+                    stmt.executeQuery("SELECT * FROM teacherlogindata" );
                     rs = stmt.getResultSet();
                     while(rs.next()) {
-                        u = rs.getString(id);
-                        p = rs.getString(pasw);
-                        if(usr.equals(u)) {
-                            System.out.println("Logged in");
-                            flag_check =1;
-                            break;
-                        }
-                
-                    }
-                if(flag_check != 1) {
-                    //Add a Popup Wrong username or password 
-                }
-                } catch (SQLException e) {
-                    System.out.print(e);
-                } 
-                //check credentials
-                //switch to teacher scene
-                Scene scene = SwitchToTeacher1();
-                stage.setScene(scene);
-                stage.setTitle("Teacher");
-                stage.setResizable(false);
-            }
-            else {
-                //check credentials
-                //switch to APPROPRIATE student scene
-                String usr = username.getText();
-                String pas = password.getText();
-                try {
-                    con = Connect.getConnection();
-                    stmt = con.createStatement();
-                    stmt.executeQuery("SELECT * FROM student" );
-                    rs = stmt.getResultSet();
-                    while(rs.next()) {
-
-                        u = rs.getString(id);
-                        p = rs.getString(pasw);
-                        if(usr.equals(u)) {
+                        u = rs.getString(Username);
+                        p = rs.getString(Password);
+                        if(usr.equals(u) && pas.equals(p)) {
                             System.out.println("Logged in");
                             flag_check =1;
                             break;
                         }
                     }
                     if(flag_check != 1) {
-                        //Add a Popup Wrong username or password 
+                        fielderrorlabel.setText("Enter a valid username or password!");
+                    }
+                    else {
+                        Scene scene = SwitchToTeacher1();
+                        stage.setScene(scene);
+                        stage.setTitle("Teacher");
+                        stage.setResizable(false);                       
+                    }
+                } catch (SQLException e) {
+                    System.out.print(e);
+                } 
+            }
+            else {
+                //check credentials for student
+                //switch to APPROPRIATE student scene
+                String usr = username.getText();
+                String pas = password.getText();
+                try {
+                    conn = Connect.getConnection();
+                    stmt = conn.createStatement();
+                    stmt.executeQuery("SELECT * FROM studentlogindata" );
+                    rs = stmt.getResultSet();
+                    while(rs.next()) {
+                        u = rs.getString(Username);
+                        p = rs.getString(Password);
+                        if(usr.equals(u) && pas.equals(p)) {
+                            System.out.println("Logged in");
+                            flag_check = 1;
+                            break;
+                        }
+                    }
+                    if(flag_check != 1) {
+                        fielderrorlabel.setText("Enter a valid username or password!");                        
+                    }
+                    else {
+                        Scene scene = SwitchToStudent1();
+                        stage.setScene(scene);
+                        stage.setTitle("Student");
+                        stage.setResizable(false);
                     }
                 } catch (SQLException e) {
                     System.out.print(e);
                 }
-                Scene scene = SwitchToStudent1();
-                stage.setScene(scene);
-                stage.setTitle("Student");
-                stage.setResizable(false);
             }
         }
     }
@@ -150,7 +159,93 @@ public class LoginController {
         ", Text=" + event.getText()+"\n");*/
          
         if(event.getCode() == KeyCode.ENTER) {
-            //switch scene
+            int flag_check =0;
+
+            Statement stmt = null;
+
+            ResultSet rs = null;
+
+            Connection conn = null;
+
+            String u = null;
+
+            String p = null;
+
+            String Username = "Username";
+
+            String Password = "Password";     
+            
+            if(username.getText().isEmpty()){
+                  fielderrorlabel.setText("Username cannot be empty!");
+              }
+              else if(password.getText().isEmpty()) {
+                  fielderrorlabel.setText("Password cannot be empty!");
+              }
+              else {
+                  //checking crendentials for teacher
+                  if(set == 1) {
+                      String usr = username.getText();
+                      String pas = password.getText();
+                      try {
+                          conn = Connect.getConnection();
+                          stmt = conn.createStatement();
+                          stmt.executeQuery("SELECT * FROM teacherlogindata" );
+                          rs = stmt.getResultSet();
+                          while(rs.next()) {
+                              u = rs.getString(Username);
+                              p = rs.getString(Password);
+                              if(usr.equals(u) && pas.equals(p)) {
+                                  System.out.println("Logged in");
+                                  flag_check =1;
+                                  break;
+                              }
+                          }
+                          if(flag_check != 1) {
+                              fielderrorlabel.setText("Enter a valid username or password!");
+                          }
+                          else {
+                              Scene scene = SwitchToTeacher1();
+                              stage.setScene(scene);
+                              stage.setTitle("Teacher");
+                              stage.setResizable(false);                       
+                          }
+                      } catch (SQLException e) {
+                          System.out.print(e);
+                      } 
+                  }
+                  else {
+                      //check credentials for student
+                      //switch to APPROPRIATE student scene
+                      String usr = username.getText();
+                      String pas = password.getText();
+                      try {
+                          conn = Connect.getConnection();
+                          stmt = conn.createStatement();
+                          stmt.executeQuery("SELECT * FROM studentlogindata" );
+                          rs = stmt.getResultSet();
+                          while(rs.next()) {
+                              u = rs.getString(Username);
+                              p = rs.getString(Password);
+                              if(usr.equals(u) && pas.equals(p)) {
+                                  System.out.println("Logged in");
+                                  flag_check = 1;
+                                  break;
+                              }
+                          }
+                          if(flag_check != 1) {
+                              fielderrorlabel.setText("Enter a valid username or password!");                        
+                          }
+                          else {
+                              Scene scene = SwitchToStudent1();
+                              stage.setScene(scene);
+                              stage.setTitle("Student");
+                              stage.setResizable(false);
+                          }
+                      } catch (SQLException e) {
+                          System.out.print(e);
+                      }
+                  }
+              }
         }
     }
     

@@ -19,8 +19,8 @@ public class Connect {
         try {
             String userName = "root";
             String password = "";
-            String url = "jdbc:mysql://localhost/javaproject";
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            String url = "jdbc:mysql://localhost/java_project";
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(url,userName,password);
             System.out.println("Database connection Esatbliohed");
         } catch (Exception e) {
