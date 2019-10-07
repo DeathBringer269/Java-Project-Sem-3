@@ -18,8 +18,8 @@ public class Connect {
     public static void init() { 
         try {
             String userName = "root";
-            String password = "password";
-            String url = "jdbc:mysql://localhost:3306/project";
+            String password = "";
+            String url = "jdbc:mysql://localhost/javaproject";
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(url,userName,password);
             System.out.println("Database connection Esatbliohed");

@@ -1,18 +1,40 @@
 package Project.controller;
 
-import Project.MainApp;
+import static Project.MainApp.stage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
-import javafx.stage.Stage;
+import javafx.scene.control.SplitMenuButton;
+import javafx.scene.input.MouseEvent;
 
 public class Teacher1Controller {
 
-    Stage stage = MainApp.stage;
-    
+    @FXML
+    private SplitMenuButton viewSpreadSheets;
+
+    @FXML
+    private MenuItem viewStudentData;
+
+    @FXML
+    private MenuItem viewMarksheet;
+
+    @FXML
+    private Button sendnotifybutton;
+
     @FXML
     private MenuItem logout_teacher1;
+
+    @FXML
+    void onClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onClick2(ActionEvent event) {
+
+    }
 
     @FXML
     void onClicklogout_teacher1(ActionEvent event) {
@@ -22,5 +44,14 @@ public class Teacher1Controller {
         stage.setResizable(false);
     }
 
-}
+    @FXML
+    void onClickmenu1(MouseEvent event) {
 
+    }
+
+    @FXML
+    void onSendNotify(MouseEvent event) {
+
+    }
+
+}

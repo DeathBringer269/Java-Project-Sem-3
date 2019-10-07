@@ -2,31 +2,27 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Project.controller.Teacher1Controller">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller.Teacher1Controller">
     <stylesheets>
         <URL value="@/Project/css/teacher1.css" />
     </stylesheets>
    <children>
       <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="500.0" spacing="50.0">
          <children>
-            <MenuButton focusTraversable="false" mnemonicParsing="false" text="View SpreadSheets">
+            <SplitMenuButton fx:id="viewSpreadSheets" mnemonicParsing="false" onMouseClicked="#onClickmenu1" text="View SpreadSheets">
               <items>
-                <MenuItem mnemonicParsing="false" text="Student Data" />
-                <MenuItem mnemonicParsing="false" text="IAT Marks" />
-                  <MenuItem mnemonicParsing="false" text="Achievement" />
+                <MenuItem fx:id="viewStudentData" mnemonicParsing="false" onAction="#onClick" text="Student Data" />
+                <MenuItem fx:id="viewMarksheet" mnemonicParsing="false" onAction="#onClick2" text="Marksheet" />
               </items>
-            </MenuButton>
-            <MenuButton focusTraversable="false" mnemonicParsing="false" text="Contact">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Notify All" />
-                <MenuItem mnemonicParsing="false" text="Individual Student" />
-              </items>
-            </MenuButton>
+            </SplitMenuButton>
+            <Button fx:id="sendnotifybutton" mnemonicParsing="false" onMouseClicked="#onSendNotify" text="Send Notification" />
             <MenuButton focusTraversable="false" mnemonicParsing="false" text="MenuButton">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
