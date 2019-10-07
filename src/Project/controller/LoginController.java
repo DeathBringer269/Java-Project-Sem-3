@@ -55,12 +55,12 @@ public class LoginController {
     void onClick(MouseEvent event) {
         //switch scene
         int flag_check =0;
-         Statement stmt = null;
+        Statement stmt = null;
         ResultSet rs = null;
-       Connection con = null;
-       String u = null;
+        Connection con = null;
+        String u = null;
         String p = null;
-         String id = "ID";
+        String id = "ID";
         String pasw = "Password";
         if(username.getText().isEmpty()){
             fielderrorlabel.setText("Username cannot be empty!");
@@ -75,34 +75,26 @@ public class LoginController {
                 String usr = username.getText();
                 String pas = password.getText();
                 try {
-            con = Connect.getConnection();
-            stmt = con.createStatement();
-            stmt.executeQuery("SELECT * FROM teacher" );
- 
-            rs = stmt.getResultSet();
-            while(rs.next()) {
-               
-                u = rs.getString(id);
-                p = rs.getString(pasw);
-                if(usr.equals(u)) {
-                    System.out.println("Logged in");
-                    flag_check =1;
-                    break;
+                    con = Connect.getConnection();
+                    stmt = con.createStatement();
+                    stmt.executeQuery("SELECT * FROM teacher" );
+                    rs = stmt.getResultSet();
+                    while(rs.next()) {
+                        u = rs.getString(id);
+                        p = rs.getString(pasw);
+                        if(usr.equals(u)) {
+                            System.out.println("Logged in");
+                            flag_check =1;
+                            break;
+                        }
+                
+                    }
+                if(flag_check != 1) {
+                    //Add a Popup Wrong username or password 
                 }
-                
-            }
-            if(flag_check != 1) {
-                //Add a Popup Wrong username or password 
-            }
-            
-            
-        } catch (SQLException e) {
-            System.out.print(e);
-        }
-                
-                
-                
-                
+                } catch (SQLException e) {
+                    System.out.print(e);
+                } 
                 //check credentials
                 //switch to teacher scene
                 Scene scene = SwitchToTeacher1();
@@ -116,35 +108,26 @@ public class LoginController {
                 String usr = username.getText();
                 String pas = password.getText();
                 try {
-            con = Connect.getConnection();
-            stmt = con.createStatement();
-            stmt.executeQuery("SELECT * FROM student" );
- 
-            rs = stmt.getResultSet();
-            while(rs.next()) {
-               
-                u = rs.getString(id);
-                p = rs.getString(pasw);
-                if(usr.equals(u)) {
-                    System.out.println("Logged in");
-                    flag_check =1;
-                    break;
+                    con = Connect.getConnection();
+                    stmt = con.createStatement();
+                    stmt.executeQuery("SELECT * FROM student" );
+                    rs = stmt.getResultSet();
+                    while(rs.next()) {
+
+                        u = rs.getString(id);
+                        p = rs.getString(pasw);
+                        if(usr.equals(u)) {
+                            System.out.println("Logged in");
+                            flag_check =1;
+                            break;
+                        }
+                    }
+                    if(flag_check != 1) {
+                        //Add a Popup Wrong username or password 
+                    }
+                } catch (SQLException e) {
+                    System.out.print(e);
                 }
-                
-            }
-            if(flag_check != 1) {
-                //Add a Popup Wrong username or password 
-            }
-            
-            
-        } catch (SQLException e) {
-            System.out.print(e);
-        }
-                
-                
-                
-                
-                
                 Scene scene = SwitchToStudent1();
                 stage.setScene(scene);
                 stage.setTitle("Student");
