@@ -2,8 +2,7 @@
 
 ## IMPORTANT NOTE TO CONTRIBUTORS  
 ## Getting Started
-
-No instructions yet
+https://sqlizer.io/#/
 
 ### Prerequisites
 
