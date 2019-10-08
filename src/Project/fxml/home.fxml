@@ -31,11 +31,12 @@
          </children>
       </HBox>
       <Line endX="900.0" layoutX="50.0" layoutY="164.0" stroke="RED" />
-      <HBox layoutX="567.0" layoutY="282.0" prefHeight="150.0" prefWidth="350.0" spacing="20.0">
+      <HBox layoutX="629.0" layoutY="397.0" prefHeight="150.0" prefWidth="350.0" spacing="20.0">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="162.0" fitWidth="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/homeCredits.png" />
+               </image></ImageView>
          </children>
       </HBox>
    </children>
