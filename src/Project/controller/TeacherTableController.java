@@ -3,6 +3,7 @@ package Project.controller;
 import Project.MainApp;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXML;
@@ -12,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class TeacherTableController {
@@ -21,16 +22,14 @@ public class TeacherTableController {
     private Button toback;
     
     @FXML
-    private VBox labelbox;
+    private GridPane gridpane;
 
     Label label[] = null;
 
     public TeacherTableController() {
-        
-        for(int i =0;i<5;i++){
-            //Label label[i] = new Label();
-            //label[i].setText("Label " + i);
-            //labelbox.getChildren().add(label[i]);
+        ArrayList<Label> label = new ArrayList();
+        for(int i =0;i<3;i++){
+                gridpane.add(label.get(i),0,i);
         }
         System.out.println("Entered the constructer");
     }

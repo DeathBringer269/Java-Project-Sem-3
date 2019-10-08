@@ -1,6 +1,7 @@
 package Project.controller;
 
 import Project.MainApp;
+import Project.connect.Connect;
 import java.io.IOException;
 import java.net.URL;
 import java.util.logging.Level;
@@ -22,10 +23,15 @@ public class HomeController {
 
     @FXML
     void onClick(ActionEvent event) {
+            Boolean status = Connect.init();
             //set login scene
-            Scene scene = setLoginPage();
-            stage.setScene(scene);
-            stage.setResizable(false);
+            if(status) {
+                Scene scene = setLoginPage();
+                stage.setScene(scene);
+                stage.setResizable(false);
+            } else {
+                ErrorDialog.showDialog("Unable to establish connection\nPlease check if server is running","ERROR");
+            }
     }
     
     public Scene setLoginPage() {

@@ -15,6 +15,7 @@ import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -33,13 +34,13 @@ public class MainApp extends Application {
             Scene scene = setHomePage();
             //System.out.println("IN HERE");
             stage.setTitle("ERP");
+            stage.getIcons().add(new Image("Project/media/college.png"));
             stage.setScene(scene); 
             stage.setResizable(false);
             stage.show();
     }
  
     public static void main(String[] args) {
-        Connect.init();
         launch(args);
     }
     

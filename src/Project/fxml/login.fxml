@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Project.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller.LoginController">
     <stylesheets>
         <URL value="@/Project/css/login.css" />
     </stylesheets>
    <children>
-      <VBox alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" spacing="10.0" style="-fx-border-style: solid; -fx-border-width: 5px 5px 5px 5px; -fx-border-color: #00bfff;" styleClass="loginpanel">
          <children>
-            <Label prefHeight="50.0" prefWidth="201.0" text="Sign in to your account" textFill="BLUE">
+            <Label prefHeight="50.0" prefWidth="201.0" text="Sign in to your account">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
@@ -40,7 +40,10 @@
                </children>
             </HBox>
             <Separator orientation="VERTICAL" prefHeight="49.0" prefWidth="17.0" visible="false" />
-            <Label text="Display  database error message here if any" textFill="RED" />
+            <Label text="Database connection established" textFill="LIME">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
          </children>
          <opaqueInsets>
             <Insets />
