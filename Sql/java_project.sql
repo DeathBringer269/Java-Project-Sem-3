@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2019 at 07:55 AM
+-- Generation Time: Oct 08, 2019 at 06:04 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -65,10 +65,10 @@ INSERT INTO `practicalmarksheet` (`PID`, `Name`, `Exp1`, `Exp2`, `Exp3`, `Exp4`,
 --
 
 CREATE TABLE `studentlogindata` (
-  `ID` decimal(3,1) DEFAULT NULL,
-  `Name` varchar(15) DEFAULT NULL,
-  `Username` decimal(7,1) DEFAULT NULL,
-  `Password` decimal(7,1) DEFAULT NULL
+  `ID` varchar(20) DEFAULT NULL,
+  `Name` varchar(30) DEFAULT NULL,
+  `Username` varchar(20) DEFAULT NULL,
+  `Password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

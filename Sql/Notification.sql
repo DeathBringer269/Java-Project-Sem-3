@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS Notification (
+    `Username` INT,
+    `Message` INT,
+    `Attachment` INT
+);
+INSERT INTO Notification VALUES
+    (182028,NULL,NULL),
+    (182023,NULL,NULL),
+    (182032,NULL,NULL),
+    (182022,NULL,NULL),
+    (182036,NULL,NULL),
+    (182004,NULL,NULL),
+    (182042,NULL,NULL),
+    (182043,NULL,NULL),
+    (182044,NULL,NULL),
+    (182055,NULL,NULL);
