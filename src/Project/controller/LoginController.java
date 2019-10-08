@@ -62,7 +62,8 @@ public class LoginController {
     int set = 1;
 
     @FXML
-    void onClick(MouseEvent event) {
+    void onClick(MouseEvent event) throws SQLException {
+
         
         int flag_check =0;
         

@@ -6,8 +6,10 @@
 package Project;
 
 import Project.connect.Connect;
+import Project.controller.LoadTableData;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -40,7 +42,8 @@ public class MainApp extends Application {
             stage.show();
     }
  
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+        
         launch(args);
     }
     

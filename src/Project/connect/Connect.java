@@ -7,6 +7,7 @@ package Project.connect;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -14,11 +15,12 @@ import java.sql.SQLException;
  * @author gnitch
  */
 public class Connect {
-    static Connection conn = null;
+    public static Connection conn = null;
+    public static ResultSet rs;
     public static boolean init() { 
         try {
             String userName = "root";
-            String password = "";
+            String password = "password";
             String url = "jdbc:mysql://localhost/java_project";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(url,userName,password);

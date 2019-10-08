@@ -51,6 +51,13 @@ public class TeacherTableController {
         tab.setText("Marksheet1");
         tab.setClosable(true);
         tabpane.getTabs().add(tab);
+        
+        //displaying table
+        
+    }
+    
+    class TableData {
+        
     }
 
     @FXML
