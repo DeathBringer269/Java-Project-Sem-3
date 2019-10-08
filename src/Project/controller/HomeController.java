@@ -30,7 +30,7 @@ public class HomeController {
                 stage.setScene(scene);
                 stage.setResizable(false);
             } else {
-                ErrorDialog.showDialog("Unable to establish connection\nPlease check if server is running","ERROR");
+                ErrorDialog.showDialog("Unable to establish connection\nPlease check if server is running or\ndatabase is present","ERROR");
             }
     }
     
