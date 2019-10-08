@@ -1,6 +1,12 @@
 ### Semester 3 Java Project
 
-## IMPORTANT NOTE TO CONTRIBUTORS  
+## Collaborators
+	Alan Dsivla
+	Sujoy Dchuna
+	Mark Coutinho
+	Priyen Dsouza 
+
+## IMPORTANT NOTE TO COLLABORATORS
 ## Getting Started
 https://sqlizer.io/#/
 
