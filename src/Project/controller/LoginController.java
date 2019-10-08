@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,7 +28,9 @@ public class LoginController {
     
     Stage stage = MainApp.stage;
     
+    public static String logged_username;
     
+    public static String logged_password;
 
     @FXML
     private Label fielderrorlabel;
@@ -81,9 +84,11 @@ public class LoginController {
         else {
             //checking crendentials for teacher
             if(set == 1) {
+                System.out.println("IN HERE");
                 String usr = username.getText();
                 String pas = password.getText();
                 try {
+                    //System.out.println("IN HERE");
                     conn = Connect.getConnection();
                     stmt = conn.createStatement();
                     stmt.executeQuery("SELECT * FROM teacherlogindata" );
@@ -101,6 +106,8 @@ public class LoginController {
                         fielderrorlabel.setText("Enter a valid username or password!");
                     }
                     else {
+                        logged_username = usr;
+                        logged_password = usr;
                         Scene scene = SwitchToTeacher1();
                         stage.setScene(scene);
                         stage.setTitle("Teacher");
@@ -133,6 +140,8 @@ public class LoginController {
                         fielderrorlabel.setText("Enter a valid username or password!");                        
                     }
                     else {
+                        logged_username = usr;
+                        logged_password = usr;                        
                         Scene scene = SwitchToStudent1();
                         stage.setScene(scene);
                         stage.setTitle("Student");
@@ -196,7 +205,7 @@ public class LoginController {
                               p = rs.getString(Password);
                               if(usr.equals(u) && pas.equals(p)) {
                                   System.out.println("Logged in");
-                                  flag_check =1;
+                                  flag_check = 1;
                                   break;
                               }
                           }
@@ -204,12 +213,15 @@ public class LoginController {
                               fielderrorlabel.setText("Enter a valid username or password!");
                           }
                           else {
-                              Scene scene = SwitchToTeacher1();
-                              stage.setScene(scene);
-                              stage.setTitle("Teacher");
-                              stage.setResizable(false);                       
+                                logged_username = usr;
+                                logged_password = usr;                              
+                                Scene scene = SwitchToTeacher1();
+                                stage.setScene(scene);
+                                stage.setTitle("Teacher");
+                                stage.setResizable(false);                       
                           }
                       } catch (SQLException e) {
+                          System.out.println("IN HERE");
                           System.out.print(e);
                       } 
                   }
@@ -236,10 +248,12 @@ public class LoginController {
                               fielderrorlabel.setText("Enter a valid username or password!");                        
                           }
                           else {
-                              Scene scene = SwitchToStudent1();
-                              stage.setScene(scene);
-                              stage.setTitle("Student");
-                              stage.setResizable(false);
+                                logged_username = usr;
+                                logged_password = usr;   
+                                Scene scene = SwitchToStudent1();
+                                stage.setScene(scene);
+                                stage.setTitle("Student");
+                                stage.setResizable(false);
                           }
                       } catch (SQLException e) {
                           System.out.print(e);
@@ -277,6 +291,7 @@ public class LoginController {
     Scene SwitchToTeacher1() {
         Scene scene = null;
         try {
+            //System.out.println("IN HERE");
             URL url = getClass().getResource("/Project/fxml/teacher1.fxml");
             Parent root = FXMLLoader.load(url);
             scene = new Scene(root);   

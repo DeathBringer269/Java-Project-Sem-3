@@ -25,14 +25,14 @@ public class TeacherTableController {
 
     Label label[] = null;
 
-    public TeacherTableController() {
-        for(int i =0;i<5;i++){
-            Label label[i] = new Label();
-            label[i].setText("Label " + i);
-            labelbox.getChildren().add(label[i]);
-        }
-       System.out.println("Entered the constructer");
-    }
+    //public TeacherTableController() {
+        //for(int i =0;i<5;i++){
+            //Label label[i] = new Label();
+            //label[i].setText("Label " + i);
+            //labelbox.getChildren().add(label[i]);
+        //}
+     //  System.out.println("Entered the constructer");
+    //}
 
     @FXML
     void onBackClicked(MouseEvent event) {
