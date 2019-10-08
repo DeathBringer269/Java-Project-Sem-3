@@ -81,13 +81,13 @@ public class LoginController {
         
         String Password = "Password";
         
-        if(onChecked()) {
-            try {
-                rememberMe();
-            } catch (IOException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        //if(onChecked()) {
+         //   try {
+         //       rememberMe();
+         //   } catch (IOException ex) {
+         //       Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+          //  }
+        //}/
           
         if(username.getText().isEmpty()){
             fielderrorlabel.setText("Username cannot be empty!");

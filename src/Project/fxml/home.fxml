@@ -3,32 +3,39 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Project.controller.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-border-style: solid; -fx-border-color: gold; -fx-border-width: 5px;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.controller.HomeController">
     <stylesheets>
         <URL value="@/Project/css/home.css" />
     </stylesheets>
    <children>
-      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="980.0" spacing="20.0">
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="980.0" spacing="20.0" AnchorPane.rightAnchor="6.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../media/sfitlogots.png" />
                </image>
             </ImageView>
-            <Label text="St. Francis Institute of Technology">
+            <Label prefHeight="131.0" prefWidth="686.0" text="St. Francis Institute of Technology" textFill="#941289">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="37.0" />
+                  <Font name="Franklin Gothic Heavy" size="42.0" />
                </font>
             </Label>
-            <Separator prefHeight="3.0" prefWidth="33.0" visible="false" />
             <Button fx:id="signinbutton_home" defaultButton="true" focusTraversable="false" mnemonicParsing="false" onAction="#onClick" text="Sign in" />
+         </children>
+      </HBox>
+      <Line endX="900.0" layoutX="50.0" layoutY="164.0" stroke="RED" />
+      <HBox layoutX="567.0" layoutY="282.0" prefHeight="150.0" prefWidth="350.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
    </children>
