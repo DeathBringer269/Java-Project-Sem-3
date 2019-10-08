@@ -2,6 +2,8 @@ package Project.controller;
 
 import Project.connect.Connect;
 import Project.MainApp;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -10,12 +12,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -53,6 +55,9 @@ public class LoginController {
     @FXML
     private Button studentbutton;
     
+    @FXML
+    private CheckBox remember;    
+    
     //1 indicates that teacher is selected
     int set = 1;
 
@@ -74,8 +79,16 @@ public class LoginController {
         String Username = "Username";
         
         String Password = "Password";
+        
+        if(onChecked()) {
+            try {
+                rememberMe();
+            } catch (IOException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
           
-      if(username.getText().isEmpty()){
+        if(username.getText().isEmpty()){
             fielderrorlabel.setText("Username cannot be empty!");
         }
         else if(password.getText().isEmpty()) {
@@ -84,7 +97,7 @@ public class LoginController {
         else {
             //checking crendentials for teacher
             if(set == 1) {
-                System.out.println("IN HERE");
+                //System.out.println("IN HERE");
                 String usr = username.getText();
                 String pas = password.getText();
                 try {
@@ -182,7 +195,8 @@ public class LoginController {
 
             String Username = "Username";
 
-            String Password = "Password";     
+            String Password = "Password";    
+            
             
             if(username.getText().isEmpty()){
                   fielderrorlabel.setText("Username cannot be empty!");
@@ -311,5 +325,30 @@ public class LoginController {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return scene;
+    }
+    
+    @FXML
+    boolean onChecked() {
+        if(remember.isSelected()) {
+            System.out.println("OK");
+            return true;
+        } else {
+            System.out.println("NOT OK");
+            return false;
+        }
+    }
+    
+    void rememberMe() throws IOException {
+        File file = new File("/Project/user.txt");
+        if(file.exists()) {
+            
+        } else {
+            if(file.createNewFile()) {
+                FileWriter myfile = new FileWriter("/Project/user.txt");
+                myfile.write(username.getText() + "\n" + password.getText());
+            } else {
+                System.out.println("Unable to save credentials");
+            }
+        }
     }
 }
