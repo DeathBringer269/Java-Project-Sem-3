@@ -20,11 +20,13 @@ public class ErrorDialog {
         Label messagelabel = new Label();
         messagelabel.setTextFill(Color.web("#ff0000"));
         messagelabel.setText(message);
+        Label label = new Label();
+        label.setText("Database: java_project\nUsername: default\nPassword: default");
         Button button = new Button();
         button.setText("OK");
         button.setOnAction(e -> onClick());
         VBox v = new VBox(20);
-        v.getChildren().addAll(messagelabel,button);
+        v.getChildren().addAll(messagelabel,label,button);
         v.setAlignment(Pos.CENTER);
         Scene scene = new Scene(v);
         stage.setScene(scene);
