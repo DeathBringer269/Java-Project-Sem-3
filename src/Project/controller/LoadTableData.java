@@ -37,10 +37,10 @@ public class LoadTableData {
    */
     public int Pid;
     public String Name;
-    public double Exp1,Exp2,Exp3,Exp4,Exp5,Avg_exp,Avg_test,Test1,Test2;
-    LoadTableData( int Pid, String Name , double Exp1 , double Exp2 ,
-            double Exp3,double Exp4,double Exp5,double Avg_exp,double Test1,
-            double Test2,double Avg_test) {
+    public int Exp1,Exp2,Exp3,Exp4,Exp5,Avg_exp,Avg_test,Test1,Test2;
+    LoadTableData( int Pid, String Name , int Exp1 , int Exp2 ,
+            int Exp3,int Exp4,int Exp5,int Avg_exp,int Test1,
+            int Test2,int Avg_test) {
         this .Pid = Pid;
         this.Name = Name;
         this.Exp1 = Exp1;
@@ -67,57 +67,57 @@ public class LoadTableData {
     public void setName(String Name) {
         this.Name = Name;
     }
-    public double getExp1() {
+    public int getExp1() {
         return this.Exp1;
     }
-    public void setExp1(double Exp1) {
+    public void setExp1(int Exp1) {
         this.Exp1 = Exp1;
     }
-    public double getExp2() {
+    public int getExp2() {
         return this.Exp2;
     }
-    public void setExp2(double Exp2) {
+    public void setExp2(int Exp2) {
         this.Exp2 = Exp2;
-    }public double getExp3() {
+    }public int getExp3() {
         return this.Exp3;
     }
-    public void setExp3(double Exp3) {
+    public void setExp3(int Exp3) {
         this.Exp3 = Exp3;
     }
-    public double getExp4() {
+    public int getExp4() {
         return this.Exp4;
     }
-    public void setExp4(double Exp4) {
+    public void setExp4(int Exp4) {
         this.Exp4 = Exp4;
     }
-    public double getExp5() {
+    public int getExp5() {
         return this.Exp5;
     }
-    public void setExp5(double Exp5) {
+    public void setExp5(int Exp5) {
         this.Exp5 = Exp5;
     }
-    public double getAvg_exp() {
+    public int getAvg_exp() {
         return this.Avg_exp;
     }
-    public void setAvg_exp(double Avg_exp) {
+    public void setAvg_exp(int Avg_exp) {
         this.Avg_exp = Avg_exp;
     }
-    public double getTest1() {
+    public int getTest1() {
         return this.Test1;
     }
-    public void setTest1(double Test1) {
+    public void setTest1(int Test1) {
         this.Test1 = Test1;
     }
-    public double getTest2() {
+    public int getTest2() {
         return this.Test2;
     }
-    public void setTest2(double Test2) {
+    public void setTest2(int Test2) {
         this.Test2 = Test2;
     }
-    public double getAvg_test() {
+    public int getAvg_test() {
         return this.Avg_test;
     }
-    public void setAvg_test(double Avg_test) {
+    public void setAvg_test(int Avg_test) {
         this.Avg_test = Avg_test;
     }
     
