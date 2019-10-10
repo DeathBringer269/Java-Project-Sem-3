@@ -55,7 +55,6 @@ public class LoginController {
 
     @FXML
     private Button studentbutton;
-       
     
     //1 indicates that teacher is selected
     int set = 1;
@@ -319,8 +318,5 @@ public class LoginController {
         }
         return scene;
     }
-    
 
-
-    
 }
