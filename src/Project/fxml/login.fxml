@@ -36,7 +36,6 @@
             <PasswordField fx:id="password" maxWidth="300.0" promptText="Password" />
             <HBox alignment="CENTER" prefHeight="32.0" prefWidth="390.0" spacing="50.0">
                <children>
-                  <CheckBox fx:id="remember" mnemonicParsing="false" onMouseClicked="#onChecked" text=" Remember me on this pc" />
                   <Button fx:id="signinbutton" mnemonicParsing="false" onKeyPressed="#onKeyPress" onMouseClicked="#onClick" text="Sign in" />
                </children>
             </HBox>

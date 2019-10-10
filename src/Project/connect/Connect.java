@@ -20,8 +20,8 @@ public class Connect {
     public static boolean init() { 
         try {
             String userName = "root";
-            String password = "password";
-            String url = "jdbc:mysql://localhost:3306/java_project";
+            String password = "";
+            String url = "jdbc:mysql://localhost/java_project";
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(url,userName,password);
             return true;

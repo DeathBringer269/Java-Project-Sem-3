@@ -54,9 +54,7 @@ public class LoginController {
 
     @FXML
     private Button studentbutton;
-    
-    @FXML
-    private CheckBox remember;    
+      
     
     //1 indicates that teacher is selected
     int set = 1;
@@ -81,13 +79,6 @@ public class LoginController {
         
         String Password = "Password";
         
-        if(onChecked()) {
-            try {
-                rememberMe();
-            } catch (IOException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
           
         if(username.getText().isEmpty()){
             fielderrorlabel.setText("Username cannot be empty!");
@@ -328,28 +319,4 @@ public class LoginController {
         return scene;
     }
     
-    @FXML
-    boolean onChecked() {
-        if(remember.isSelected()) {
-            System.out.println("OK");
-            return true;
-        } else {
-            System.out.println("NOT OK");
-            return false;
-        }
-    }
-    
-    void rememberMe() throws IOException {
-        File file = new File("/Project/user.txt");
-        if(file.exists()) {
-            
-        } else {
-            if(file.createNewFile()) {
-                FileWriter myfile = new FileWriter("/Project/user.txt");
-                myfile.write(username.getText() + "\n" + password.getText());
-            } else {
-                System.out.println("Unable to save credentials");
-            }
-        }
-    }
 }
