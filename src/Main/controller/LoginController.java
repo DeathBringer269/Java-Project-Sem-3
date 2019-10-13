@@ -126,13 +126,23 @@ public class LoginController implements Initializable {
                     } else {
                         error.setText("No such username or password.Check again");
                         error.setStyle("-fx-text-fill: red");
-                        flag = 1;
+                        flag = 0;
                     }
                 }
 
-                if (flag == 1) {
+                if (flag == 1 && set == 1) {
                     //switch to teacher
-                } else {
+                    Parent root = FXMLLoader.load(getClass().getResource("/Main/fxml/teacher1.fxml"));
+                    Scene scene = BackToLogin.getScene();
+                    root.translateYProperty().set(scene.getHeight());
+                    StackPane stackpane = (StackPane) scene.getRoot();
+                    stackpane.getChildren().add(root);
+                    Timeline timeline = new Timeline();
+                    KeyValue kv = new KeyValue(root.translateYProperty(),0,Interpolator.EASE_IN);
+                    KeyFrame kf = new KeyFrame(Duration.seconds(0.4),kv);
+                    timeline.getKeyFrames().add(kf);
+                    timeline.play();
+                } else if(flag == 1 && set == 0) {
                     //switch to student
                 }
             } catch (Exception e) {
