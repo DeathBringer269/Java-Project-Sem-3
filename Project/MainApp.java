@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -36,6 +37,7 @@ public class MainApp extends Application {
             stage.getIcons().add(new Image("Project/media/college.png"));
             stage.setScene(scene); 
             stage.setResizable(false);
+            stage.initStyle(StageStyle.DECORATED);
             stage.show();
     }
  
