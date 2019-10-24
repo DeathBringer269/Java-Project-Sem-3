@@ -142,6 +142,9 @@ public class LoginController implements Initializable {
                     KeyFrame kf = new KeyFrame(Duration.seconds(0.4),kv);
                     timeline.getKeyFrames().add(kf);
                     timeline.play();
+                    timeline.setOnFinished(Event -> {
+                        stackpane.getChildren().remove(anchorpane);
+                    });
                 } else if(flag == 1 && set == 0) {
                     //switch to student
                 }

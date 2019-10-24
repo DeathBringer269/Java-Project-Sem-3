@@ -26,11 +26,10 @@ public class Main extends Application {
     public static Stage stage;
     
     public static void main(String args[]) {
-
-
         launch(args);
     }
     
+    @Override
     public void start(Stage primaryStage) {
         try {
             stage = primaryStage;

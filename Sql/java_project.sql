@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2019 at 06:04 PM
+-- Generation Time: Oct 24, 2019 at 03:41 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -67,8 +67,8 @@ INSERT INTO `practicalmarksheet` (`PID`, `Name`, `Exp1`, `Exp2`, `Exp3`, `Exp4`,
 CREATE TABLE `studentlogindata` (
   `ID` varchar(20) DEFAULT NULL,
   `Name` varchar(30) DEFAULT NULL,
-  `Username` varchar(20) DEFAULT NULL,
-  `Password` varchar(20) DEFAULT NULL
+  `Username` int(20) DEFAULT NULL,
+  `Password` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -76,16 +76,16 @@ CREATE TABLE `studentlogindata` (
 --
 
 INSERT INTO `studentlogindata` (`ID`, `Name`, `Username`, `Password`) VALUES
-('1.0', 'Alan Dsilva', '182028.0', '182028.0'),
-('2.0', 'Sujoy Dchuna', '182023.0', '182023.0'),
-('3.0', 'Priyen Dsouza', '182032.0', '182032.0'),
-('4.0', 'Rebecca Dias ', '182022.0', '2525.0'),
-('5.0', 'Nimisha George ', '182036.0', '182036.0'),
-('6.0', 'Mark Coutinho', '182004.0', '182004.0'),
-('7.0', 'Student 2', '182042.0', '182042.0'),
-('8.0', 'Student 3', '182043.0', '182043.0'),
-('9.0', 'Student 4', '182044.0', '182044.0'),
-('10.0', 'Student 5', '182055.0', '182055.0');
+('1.0', 'Alan Dsilva', 182028, 182028),
+('2.0', 'Sujoy Dchuna', 182023, 182023),
+('3.0', 'Priyen Dsouza', 182032, 182032),
+('4.0', 'Rebecca Dias ', 182022, 2525),
+('5.0', 'Nimisha George ', 182036, 182036),
+('6.0', 'Mark Coutinho', 182004, 182004),
+('7.0', 'Student 2', 182042, 182042),
+('8.0', 'Student 3', 182043, 182043),
+('9.0', 'Student 4', 182044, 182044),
+('10.0', 'Student 5', 182055, 182055);
 
 -- --------------------------------------------------------
 

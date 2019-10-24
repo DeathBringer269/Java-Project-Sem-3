@@ -6,11 +6,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="200.0" spacing="20.0" styleClass="red" stylesheets="@../style/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.controller.TabledrawerteacherController">
    <children>
-      <FontAwesomeIconView glyphName="TABLE" size="80" textAlignment="CENTER" wrappingWidth="180.0" />
-      <JFXButton prefHeight="50.0" prefWidth="180.0" stylesheets="@../style/tabledrawerteacher.css" text="Student Marksheet IAT1">
+      <FontAwesomeIconView fill="ANTIQUEWHITE" glyphName="TABLE" size="80" textAlignment="CENTER" wrappingWidth="180.0" />
+      <JFXButton prefHeight="50.0" prefWidth="180.0" stylesheets="@../style/common.css" text="Student Marksheet IAT1" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="50.0" prefWidth="180.0" stylesheets="@../style/common.css" text="Achievements" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="15.0" />
          </font>
