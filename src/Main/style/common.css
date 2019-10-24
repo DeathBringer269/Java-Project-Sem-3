@@ -6,10 +6,6 @@
 
 }
 
-.gradient{ 
-    -fx-background: linear-gradient(35deg,#CCFFFF,#FFCCCC);
-  }
-
 .red {
     -fx-background-color:  #661940;
 }
