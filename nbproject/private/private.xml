@@ -11,6 +11,27 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/Teacher1Controller.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/connect/Connect.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/test/Main/FXML.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/home.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/Student1Controller.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/LoginController.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/HomeController.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/test/Main/DBConnect.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/tabledrawerteacher.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/style/common.css</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/Main.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/TestController.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/controller/TabledrawerteacherController.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/login.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/student1.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/test/Main/TableViewSample.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/test/Main/DynamicTable.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/teacher1.fxml</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/test/Main/Person.java</file>
+            <file>file:/C:/Users/Grace/Documents/NetBeansProjects/JavaProject/src/Main/fxml/test.fxml</file>
+        </group>
     </open-files>
 </project-private>
