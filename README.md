@@ -14,7 +14,7 @@ MySqlConnector jar
   
 ## Getting Started
 To run this project you will need to set up a database.  
-The .sql file can be found in '$PROJECT_DIR$/sql/java_project'  
+The .sql file can be found in '$PROJECT_DIR$/Sql/java_project'  
 You should import it after creating 'java_project' database.  
 
 ### Prerequisites

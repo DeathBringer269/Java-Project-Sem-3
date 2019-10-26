@@ -24,13 +24,16 @@
   <component name="ProjectId" id="1ShQqT5Dlm01PKZt65EWoCdVRFW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_221" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\com\erp" />
+      <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\com\erp\view" />
       <recent name="C:\Users\Grace\Documents\IdeaProjects\EmailClient\src\com\client\view" />
     </key>
   </component>
@@ -48,8 +51,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.client.Launcher" />
-      <module name="EmailClient" />
+      <option name="MAIN_CLASS_NAME" value="com.erp.Launcher" />
+      <module name="JavaProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.client.controller.*" />
