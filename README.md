@@ -2,6 +2,8 @@
 
 
 ## IMPORTANT NOTE TO COLLABORATORS
+  Migrating project to IntelliJ Idea!!
+  
 ## Getting Started
 https://sqlizer.io/#/
 
