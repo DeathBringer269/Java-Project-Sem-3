@@ -1,7 +1,5 @@
-# Semester 3 Java Project :exclamation: still in development :exclamation:
-Our Semester 3 Java Project.  
-The main aim of this project was to showcase database connectivity, but we thought we should be doing more.  
-So we have added more features.  
+# Semester 3 Java Project :exclamation: still under development :exclamation:
+The aim of this project is to redesign the workflow of the college system.
     
 ## NOTE
 This project is built in Netbeans IDE(Migrating to Intellij)
