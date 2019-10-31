@@ -1,6 +1,7 @@
 package main.java.com.erp.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -11,7 +12,10 @@ import main.java.com.erp.controller.service.ValidateLogin;
 import main.java.com.erp.model.LoggedAccount;
 import main.java.com.erp.view.ViewFactory;
 
-public class LoginWindowController extends BaseController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LoginWindowController extends BaseController implements Initializable {
 
     @FXML
     private TextField usernameField;
@@ -25,8 +29,20 @@ public class LoginWindowController extends BaseController {
     @FXML
     private CheckBox checkBox;
 
+
     public LoginWindowController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
+        //System.out.println("not empty");
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        RememberMe rememberMe = new RememberMe();
+        if(rememberMe.hasValue()) {
+            usernameField.setText(rememberMe.getUsername());
+            passwordField.setText(rememberMe.getPassword());
+            checkBox.selectedProperty().set(true);
+        }
     }
 
     public void setErrorLabel(String errorLabel) {
@@ -38,9 +54,13 @@ public class LoginWindowController extends BaseController {
         LoggedAccount loggedAccount = new LoggedAccount(usernameField.getText(), passwordField.getText());
         ValidateLogin validateLogin = new ValidateLogin();
         if(validateLogin.check(this)) {
+            RememberMe rememberMe = new RememberMe();
             if(onCheck()) {
-                RememberMe rememberMe = new RememberMe();
+                System.out.println("saving credentials");
                 rememberMe.saveCredentials();
+            } else {
+                System.out.println("clearing credentials");
+                rememberMe.clearCredentials();
             }
             ViewFactory viewFactory = new ViewFactory();
             viewFactory.showTeacherHome();
@@ -57,4 +77,9 @@ public class LoginWindowController extends BaseController {
         }
         return false;
     }
+
+    public void setUsername(String setUsername) {
+        usernameField.setText(setUsername);
+    }
+
 }

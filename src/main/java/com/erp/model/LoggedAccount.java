@@ -9,6 +9,7 @@ public class LoggedAccount {
     public LoggedAccount(String username, String password) {
         this.username = username;
         this.password = password;
+        //System.out.print(username + password);
     }
 
     public static String getUsername() {
