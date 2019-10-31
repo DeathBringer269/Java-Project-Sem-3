@@ -2,6 +2,8 @@
   <dictionary name="Grace">
     <words>
       <w>jdbc</w>
+      <w>netbeans</w>
+      <w>xampp</w>
     </words>
   </dictionary>
 </component>

@@ -1,6 +1,5 @@
 package main.java.com.erp.controller.service;
 
-import main.java.com.erp.controller.LoginWindowController;
 import main.java.com.erp.model.LoggedAccount;
 
 import java.io.*;

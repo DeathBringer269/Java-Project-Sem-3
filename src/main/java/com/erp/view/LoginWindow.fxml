@@ -22,5 +22,11 @@
       <Label fx:id="errorLabel" alignment="CENTER" layoutX="50.0" layoutY="118.0" prefWidth="300.0" textFill="RED" />
       <Button layoutX="237.0" layoutY="256.0" mnemonicParsing="false" onAction="#onSignInAction" text="Sign in" />
       <CheckBox fx:id="checkBox" layoutX="112.0" layoutY="260.0" mnemonicParsing="false" onAction="#onCheck" text="Remember me" />
+      <Label layoutX="86.0" layoutY="295.0" prefHeight="17.0" prefWidth="250.0" text="Default username and password is your pid" />
+      <Button layoutX="254.0" layoutY="363.0" mnemonicParsing="false" onAction="#changeServerDetails" prefHeight="5.0" prefWidth="132.0" text="Change Server Details" textFill="#0000a1">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -63,10 +63,16 @@ public class LoginWindowController extends BaseController implements Initializab
                 rememberMe.clearCredentials();
             }
             ViewFactory viewFactory = new ViewFactory();
-            viewFactory.showTeacherHome();
+            viewFactory.showTeacherHomeWindow();
             Stage stage = (Stage) errorLabel.getScene().getWindow();
             viewFactory.closeStage(stage);
         }
+    }
+
+    @FXML
+    void changeServerDetails() {
+        ViewFactory viewFactory = new ViewFactory();
+        viewFactory.showServerOptionsWindow();
     }
 
     @FXML
@@ -76,10 +82,6 @@ public class LoginWindowController extends BaseController implements Initializab
             return true;
         }
         return false;
-    }
-
-    public void setUsername(String setUsername) {
-        usernameField.setText(setUsername);
     }
 
 }
