@@ -1,5 +1,8 @@
 # Semester 3 Java Project :exclamation: still under development :exclamation:
 The aim of this project is to redesign the workflow of the college system.
+
+#### :exclamation: Note to Collaborators
+database name changed from "javaproject" to "college_data"
     
 ## NOTE
 This project is built in Netbeans IDE(Migrating to Intellij)
