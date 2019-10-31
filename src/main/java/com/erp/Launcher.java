@@ -1,10 +1,8 @@
-package com.erp;
+package main.java.com.erp;
 
-import com.erp.view.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
-
-import javax.swing.text.View;
+import main.java.com.erp.view.ViewFactory;
 
 public class Launcher extends Application {
 
@@ -13,9 +11,7 @@ public class Launcher extends Application {
     }
 
     public void start(Stage primaryStage) {
-        System.out.println("here");
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showHomeWindow();
     }
-
 }

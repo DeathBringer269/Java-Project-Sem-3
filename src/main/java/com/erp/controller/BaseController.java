@@ -1,6 +1,7 @@
-package com.erp.controller;
+package main.java.com.erp.controller;
 
-import com.erp.view.ViewFactory;
+
+import main.java.com.erp.view.ViewFactory;
 
 public class BaseController {
 
