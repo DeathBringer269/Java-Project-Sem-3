@@ -14,7 +14,7 @@ public class Launcher extends Application {
     public void start(Stage primaryStage) {
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showHomeWindow();
-        DBConnect dbConnect = new DBConnect();
-        dbConnect.init();
+//        DBConnect dbConnect = new DBConnect();
+//        dbConnect.init();
     }
 }
