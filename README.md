@@ -5,18 +5,19 @@ The aim of this project is to redesign the workflow of the college system.
 database name changed from "javaproject" to "college_data"
     
 ## NOTE
-This project is built in Netbeans IDE(Migrating to Intellij)
-Java version: SE 8   
-Server Technology: Xampp  
-Additional libraries:(included in '$PROJECT_DIR$/lib')  
-JPheonix Material Design Theme  
-FontAwesomeIcon jar file  
+This project is built in IntelliJ(Previously Netbeans:still supports development in Netbeans:)
+Java version: SE 8
+   
+Server Technology: Xampp(localhost)
+sql files are stores in src/main/resources/sql
+  
+Additional libraries:(included in '$PROJECT_DIR$/src/main/resources/libraries')  
 MySqlConnector jar  
   
-## Getting Started
+<h2>Getting Started</h2> :exclamation: 
 To run this project you will need to set up a database.  
-The .sql file can be found in '$PROJECT_DIR$/Sql/java_project'  
-You should import it after creating 'java_project' database.  
+The .sql file can be found in '$PROJECT_DIR$/src/main/reources/sql/'  
+You should import it after creating 'college_data' database.  
 
 ### Prerequisites
 
