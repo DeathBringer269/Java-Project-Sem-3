@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.erp.controller;
+package main.java.com.erp.controller.erp.controller;
 
-import com.erp.Connect;
+import main.java.com.erp.controller.erp.Connect;
 import com.jfoenix.controls.JFXDrawer;
 import java.io.IOException;
 import java.net.URL;

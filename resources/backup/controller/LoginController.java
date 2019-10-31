@@ -1,6 +1,6 @@
-package com.erp.controller;
+package main.java.com.erp.controller.erp.controller;
 
-import com.erp.Connect;
+import main.java.com.erp.controller.erp.Connect;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;

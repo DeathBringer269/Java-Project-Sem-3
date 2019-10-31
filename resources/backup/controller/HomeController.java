@@ -1,4 +1,4 @@
-package com.erp.controller;
+package main.java.com.erp.controller.erp.controller;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.erp;
+package main.java.com.erp.controller.erp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
