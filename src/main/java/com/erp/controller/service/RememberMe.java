@@ -55,9 +55,9 @@ public class RememberMe {
             properties.setProperty("username", LoggedAccount.getUsername());
             properties.setProperty("password", LoggedAccount.getPassword());
             FileWriter writer = new FileWriter(configFile);
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-            LocalDateTime now = LocalDateTime.now();
-            properties.store(writer, "Saved Credentials: " + dtf.format(now));
+//            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//            LocalDateTime now = LocalDateTime.now();
+            properties.store(writer, "Saved Credentials: ");
             writer.close();
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();

@@ -38,9 +38,9 @@ public class ServerProperties {
             properties.setProperty("username",username);
             properties.setProperty("password",password);
             FileWriter writer = new FileWriter(configFile);
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-            LocalDateTime now = LocalDateTime.now();
-            properties.store(writer, "Server Settings: " + dtf.format(now));
+//            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//            LocalDateTime now = LocalDateTime.now();
+            properties.store(writer, "Server Settings: ");
             writer.close();
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
