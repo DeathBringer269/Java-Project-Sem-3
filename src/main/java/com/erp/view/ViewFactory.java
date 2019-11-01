@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import main.java.com.erp.controller.*;
+import main.java.com.erp.model.ServerDetails;
 
 import java.io.IOException;
 
@@ -34,12 +36,17 @@ public class ViewFactory {
 
     public void showOptionsWindow() {
         BaseController controller = new OptionsWindowController(this, "OptionsWindow.fxml");
-        initializeStage(controller, "Options",false, true);
+        initializeStage(controller, "Options",false, true, true);
     }
 
-    public void showServerOptionsWindow() {
-        BaseController controller = new ServerOptionsWindowController(this, "ServerOptionsWindow.fxml");
-        initializeStage(controller, "Server Options", false, true);
+    public void showServerOptionsWindow(ServerDetails serverDetails) {
+        BaseController controller = new ServerOptionsWindowController(this, "ServerOptionsWindow.fxml", serverDetails);
+        initializeStage(controller, "Server Options", false, true, true);
+    }
+
+    public void showAuthenticateAdminWindow() {
+        BaseController controller = new AuthenticateAdminWindowController(this, "AuthenticateAdminWindow.fxml");
+        initializeStage(controller, "Authenticate", false, true, true);
     }
 
     private void initializeStage(BaseController controller, String title, Boolean resizable) {
@@ -63,7 +70,7 @@ public class ViewFactory {
         }
     }
 
-    private void initializeStage(BaseController controller, String title, Boolean resizable, Boolean modality) {
+    private void initializeStage(BaseController controller, String title, Boolean resizable, Boolean modality, Boolean decorated) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFxmlName()));
         fxmlLoader.setController(controller);
         Parent parent = null;
@@ -80,6 +87,11 @@ public class ViewFactory {
         stage.getIcons().add(new Image(ViewFactory.class.getResourceAsStream("media/college.png")));
         if(modality) {
             stage.initModality(Modality.APPLICATION_MODAL);
+        }
+        if(decorated) {
+            stage.initStyle(StageStyle.DECORATED);
+        } else {
+            stage.initStyle(StageStyle.UNDECORATED);
         }
         stage.show();
         if(!resizable) {

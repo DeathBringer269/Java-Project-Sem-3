@@ -7,9 +7,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.java.com.erp.controller.service.DBConnect;
 import main.java.com.erp.controller.service.RememberMe;
+import main.java.com.erp.controller.service.ServerProperties;
 import main.java.com.erp.controller.service.ValidateLogin;
 import main.java.com.erp.model.LoggedAccount;
+import main.java.com.erp.model.ServerDetails;
 import main.java.com.erp.view.ViewFactory;
 
 import java.net.URL;
@@ -29,6 +32,9 @@ public class LoginWindowController extends BaseController implements Initializab
     @FXML
     private CheckBox checkBox;
 
+    private DBConnect dbConnect;
+
+    private ServerDetails serverDetails;
 
     public LoginWindowController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
@@ -42,6 +48,11 @@ public class LoginWindowController extends BaseController implements Initializab
             usernameField.setText(rememberMe.getUsername());
             passwordField.setText(rememberMe.getPassword());
             checkBox.selectedProperty().set(true);
+        }
+        serverDetails = new ServerDetails(new ServerProperties());
+        dbConnect= new DBConnect(serverDetails);
+        if(dbConnect.init()) {
+            System.out.println("connected");
         }
     }
 
@@ -72,7 +83,9 @@ public class LoginWindowController extends BaseController implements Initializab
     @FXML
     void changeServerDetails() {
         ViewFactory viewFactory = new ViewFactory();
-        viewFactory.showServerOptionsWindow();
+        viewFactory.showServerOptionsWindow(serverDetails);
+        Stage stage = (Stage) errorLabel.getScene().getWindow();
+        viewFactory.closeStage(stage);
     }
 
     @FXML

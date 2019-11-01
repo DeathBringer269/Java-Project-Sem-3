@@ -2,7 +2,6 @@ package main.java.com.erp.controller.service;
 
 import main.java.com.erp.controller.LoginWindowController;
 import main.java.com.erp.model.LoggedAccount;
-import main.java.com.erp.model.Server;
 
 public class ValidateLogin {
 
@@ -24,17 +23,18 @@ public class ValidateLogin {
             loginWindowController.setErrorLabel("Password cannot be empty!");
         } else {
             loginWindowController.setErrorLabel("");
-            DBConnect dbConnect = new DBConnect("root", "");
-            if((dbConnect.init())) {
-                //code to check if values match those in database will go here
-                //return true if matching
-                //return false if not matching
-                //table to check from = "teacher_login_data" in database "college_data"
-                return true;
-            } else {
-                loginWindowController.setErrorLabel("Unable to establish connection to database");
-                return false;
-            }
+//            DBConnect dbConnect = new DBConnect("root", "");
+//            if((dbConnect.init())) {
+//                //code to check if values match those in database will go here
+//                //return true if matching
+//                //return false if not matching
+//                //table to check from = "teacher_login_data" in database "college_data"
+//                return true;
+//            } else {
+//                loginWindowController.setErrorLabel("Unable to establish connection to database");
+//                return false;
+//            }
+            return true;
         }
         return false;
     }

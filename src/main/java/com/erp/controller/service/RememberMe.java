@@ -14,7 +14,7 @@ public class RememberMe {
     private String password;
 
     public String getUsername() {
-        File configFile = new File("src/main/java/com/erp/controller/service/config.properties");
+        File configFile = new File("src/main/java/com/erp/controller/service/user.properties");
         try {
             FileReader reader = new FileReader(configFile);
             Properties props = new Properties();
@@ -31,7 +31,7 @@ public class RememberMe {
     }
 
     public String getPassword() {
-        File configFile = new File("src/main/java/com/erp/controller/service/config.properties");
+        File configFile = new File("src/main/java/com/erp/controller/service/user.properties");
         try {
             FileReader reader = new FileReader(configFile);
             Properties props = new Properties();
@@ -49,7 +49,7 @@ public class RememberMe {
 
 
     public void saveCredentials() {
-        File configFile = new File("src/main/java/com/erp/controller/service/config.properties");
+        File configFile = new File("src/main/java/com/erp/controller/service/user.properties");
         try {
             Properties properties = new Properties();
             properties.setProperty("username", LoggedAccount.getUsername());
@@ -68,7 +68,7 @@ public class RememberMe {
     }
 
     public void clearCredentials() {
-        File configFile = new File("src/main/java/com/erp/controller/service/config.properties");
+        File configFile = new File("src/main/java/com/erp/controller/service/user.properties");
         try {
             FileWriter writer = new FileWriter(configFile);
             writer.write("");
@@ -82,7 +82,7 @@ public class RememberMe {
     }
 
     public boolean hasValue() {
-        File configFile = new File("src/main/java/com/erp/controller/service/config.properties");
+        File configFile = new File("src/main/java/com/erp/controller/service/user.properties");
         if(configFile.length() == 0) {
             return false;
         } else {

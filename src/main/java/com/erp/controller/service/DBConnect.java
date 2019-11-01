@@ -1,11 +1,9 @@
 package main.java.com.erp.controller.service;
 
-import main.java.com.erp.model.Server;
+import main.java.com.erp.model.ServerDetails;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class DBConnect {
 
@@ -13,23 +11,31 @@ public class DBConnect {
 
     private String password;
 
-    Connection connection;
+    private String url;
 
-    public DBConnect(String username, String password) {
-        this.username = username;
-        this.password = password;
+    private String dbName;
+
+    private Connection connection = null;
+
+    public DBConnect(ServerDetails server) {
+        this.url = server.getUrl();
+        this.dbName = server.getDbname();
+        this.username = server.getUsername();
+        this.password = server.getPassword();
+        System.out.println(url+dbName);
     }
+
 
     public boolean init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection  = DriverManager.getConnection("jdbc:mysql://localhost:3306/college_data",username, password);
+            connection  = DriverManager.getConnection(url + dbName,username, password);
             /*Statement stmt=conn.createStatement();
             ResultSet rs=stmt.executeQuery("select Username from teacher_login_data");
             while(rs.next()) {
                 System.out.println(rs.getInt(1));
             }*/
-            System.out.println("connected");
+            System.out.println("Connected to " + url + dbName + "\n" + "Username: " + username + "\nPassword: " + password);
             return true;
         } catch (Exception  e) {
             e.printStackTrace();
