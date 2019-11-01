@@ -71,7 +71,7 @@ public class LoginWindowController extends BaseController implements Initializab
                 rememberMe.saveCredentials();
             } else {
                 System.out.println("clearing credentials");
-                rememberMe.clearCredentials();
+                //rememberMe.clearCredentials();
             }
             ViewFactory viewFactory = new ViewFactory();
             viewFactory.showTeacherHomeWindow();
