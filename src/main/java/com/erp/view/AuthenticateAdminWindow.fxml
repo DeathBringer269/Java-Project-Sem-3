@@ -14,16 +14,16 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="126.0" layoutY="124.0" />
-      <PasswordField fx:id="passwordField" layoutX="126.0" layoutY="179.0" />
-      <Label layoutX="27.0" layoutY="128.0" text="Username(admin):" />
-      <Label layoutX="29.0" layoutY="183.0" text="Password(admin):" />
+      <TextField fx:id="usernameField" layoutX="145.0" layoutY="124.0" />
+      <PasswordField fx:id="passwordField" layoutX="145.0" layoutY="179.0" />
+      <Label layoutX="38.0" layoutY="128.0" text="Username(admin):" />
+      <Label layoutX="40.0" layoutY="183.0" text="Password(admin):" />
       <Label fx:id="errorLabel" alignment="CENTER" layoutX="25.0" layoutY="97.0" prefWidth="300.0" textFill="RED" />
       <Button layoutX="191.0" layoutY="230.0" mnemonicParsing="false" onAction="#onAuthenticate" onKeyPressed="#onAuthenticateKey" text="Authenticate" textFill="RED" />
       <Label alignment="CENTER" layoutX="50.0" layoutY="274.0" prefHeight="17.0" prefWidth="250.0" text="Enter admin username and password" />
-      <Label alignment="CENTER" layoutX="50.0" layoutY="291.0" prefHeight="17.0" prefWidth="250.0" text="Are you sure you know what you are doing?" textFill="RED" />
+      <Label alignment="CENTER" layoutX="50.0" layoutY="291.0" prefHeight="17.0" prefWidth="250.0" text="Are you sure you know what you are doing?" textFill="BLUE" />
       <Label alignment="CENTER" layoutX="50.0" layoutY="308.0" prefHeight="17.0" prefWidth="250.0" text="Changng default values may break build" textFill="RED" />
-      <Label alignment="CENTER" layoutX="25.0" layoutY="75.0" prefWidth="300.0" text="Enter you admin username and password! " textFill="RED" />
-      <Button layoutX="105.0" layoutY="230.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" textFill="FORESTGREEN" />
+      <Label alignment="CENTER" layoutX="25.0" layoutY="75.0" prefWidth="300.0" text="Enter you admin username and password! " textFill="BLUE" />
+      <Button layoutX="87.0" layoutY="230.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" textFill="FORESTGREEN" />
    </children>
 </AnchorPane>
