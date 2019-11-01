@@ -25,22 +25,22 @@
   <component name="ProjectId" id="1ShQqT5Dlm01PKZt65EWoCdVRFW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/media" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\main\resources\media" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\main\resources\media" />
       <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\main\java\com\erp\view" />
       <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\com\erp" />
       <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\com\erp\view" />
       <recent name="C:\Users\Grace\Documents\IdeaProjects\EmailClient\src\com\client\view" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Grace\Documents\NetBeansProjects\JavaProject\src\main\resources\media" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -55,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Launcher (1)">
+  <component name="RunManager" selected="JAR Application.JavaProject.jar (1)">
     <configuration name="Launcher (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.com.erp.Launcher" />
       <module name="JavaProject" />
@@ -82,13 +82,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaProject.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/JavaProject_jar/JavaProject.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JavaProject.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/dist/JavaProject.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JavaProject_jar.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/JavaProject_jar/JavaProject_jar.jar" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Launcher" />
       <item itemvalue="Application.Launcher (1)" />
+      <item itemvalue="JAR Application.JavaProject.jar" />
+      <item itemvalue="JAR Application.JavaProject_jar.jar" />
+      <item itemvalue="JAR Application.JavaProject.jar (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.JavaProject.jar (1)" />
         <item itemvalue="Application.Launcher (1)" />
+        <item itemvalue="JAR Application.JavaProject_jar.jar" />
+        <item itemvalue="JAR Application.JavaProject.jar" />
         <item itemvalue="Application.Launcher" />
       </list>
     </recent_temporary>
