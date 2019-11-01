@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.java.com.erp.controller.service.DBConnect;
 import main.java.com.erp.controller.service.RememberMe;
@@ -30,6 +31,9 @@ public class LoginWindowController extends BaseController implements Initializab
     private Label errorLabel;
 
     @FXML
+    private Label connectionStatus;
+
+    @FXML
     private CheckBox checkBox;
 
     private DBConnect dbConnect;
@@ -52,7 +56,11 @@ public class LoginWindowController extends BaseController implements Initializab
         serverDetails = new ServerDetails(new ServerProperties());
         dbConnect= new DBConnect(serverDetails);
         if(dbConnect.init()) {
-            System.out.println("connected");
+            connectionStatus.setText("Connected successfully!");
+            connectionStatus.setTextFill(Color.GREEN);
+        } else {
+            connectionStatus.setText("Not Connected! Check your connection!");
+            connectionStatus.setTextFill(Color.RED);
         }
     }
 
@@ -95,6 +103,14 @@ public class LoginWindowController extends BaseController implements Initializab
             return true;
         }
         return false;
+    }
+
+    @FXML
+    void onBack() {
+        ViewFactory viewFactory = new ViewFactory();
+        Stage stage = (Stage) errorLabel.getScene().getWindow();
+        viewFactory.closeStage(stage);
+        viewFactory.showHomeWindow();
     }
 
 }

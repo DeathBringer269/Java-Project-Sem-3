@@ -14,19 +14,25 @@ import java.io.IOException;
 
 public class ViewFactory {
 
+    private Stage loginWindowStage;
+
     public void showHomeWindow() {
         BaseController controller = new HomeWindowController(this, "HomeWindow.fxml");
-        initializeStage(controller,"Home", false);
+        Stage stage = initializeStage(controller,"Home", false);
     }
 
     public void showLoginWindow() {
         BaseController controller = new LoginWindowController(this, "LoginWindow.fxml");
-        initializeStage(controller, "Login", false);
+        loginWindowStage = initializeStage(controller, "Login", false);
     }
+
+//    public Stage getLoginWindowStage() {
+//        return loginWindowStage;
+//    }
 
     public void showTeacherHomeWindow() {
         BaseController controller = new TeacherHomeWindowController(this, "TeacherHomeWindow.fxml");
-        initializeStage(controller, "Home", false);
+        Stage stage = initializeStage(controller, "Home", false);
     }
 
     public void showTableViewWindow() {
@@ -36,7 +42,7 @@ public class ViewFactory {
 
     public void showOptionsWindow() {
         BaseController controller = new OptionsWindowController(this, "OptionsWindow.fxml");
-        initializeStage(controller, "Options",false, true, true);
+        initializeStage(controller,true, "Options",false, true, true);
     }
 
     public void showServerOptionsWindow(ServerDetails serverDetails) {
@@ -49,7 +55,7 @@ public class ViewFactory {
         initializeStage(controller, "Authenticate", false, true, true);
     }
 
-    private void initializeStage(BaseController controller, String title, Boolean resizable) {
+    private Stage initializeStage(BaseController controller, String title, Boolean resizable) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFxmlName()));
         fxmlLoader.setController(controller);
         Parent parent = null;
@@ -57,7 +63,7 @@ public class ViewFactory {
             parent = fxmlLoader.load();
         } catch (IOException e) {
             e.printStackTrace();
-            return;
+            return null;
         }
         Scene scene = new Scene(parent);
         Stage stage = new Stage();
@@ -68,6 +74,7 @@ public class ViewFactory {
         if(!resizable) {
             stage.setResizable(false);
         }
+        return stage;
     }
 
     private void initializeStage(BaseController controller, String title, Boolean resizable, Boolean modality, Boolean decorated) {
@@ -94,6 +101,40 @@ public class ViewFactory {
             stage.initStyle(StageStyle.UNDECORATED);
         }
         stage.show();
+        if(!resizable) {
+            stage.setResizable(false);
+        }
+    }
+
+
+    private void initializeStage(BaseController controller, boolean showAndWait, String title, Boolean resizable, Boolean modality, Boolean decorated) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFxmlName()));
+        fxmlLoader.setController(controller);
+        Parent parent = null;
+        try {
+            parent = fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle(title);
+        stage.getIcons().add(new Image(ViewFactory.class.getResourceAsStream("media/college.png")));
+        if(modality) {
+            stage.initModality(Modality.APPLICATION_MODAL);
+        }
+        if(decorated) {
+            stage.initStyle(StageStyle.DECORATED);
+        } else {
+            stage.initStyle(StageStyle.UNDECORATED);
+        }
+        if(showAndWait) {
+            stage.showAndWait();
+        } else {
+            stage.show();
+        }
         if(!resizable) {
             stage.setResizable(false);
         }

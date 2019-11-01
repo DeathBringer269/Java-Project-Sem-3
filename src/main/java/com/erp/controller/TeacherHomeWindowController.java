@@ -26,5 +26,12 @@ public class TeacherHomeWindowController extends BaseController {
     void onOptions() {
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showOptionsWindow();
+        System.out.println(OptionsWindowController.checked);
+        if(OptionsWindowController.checked) {
+            Stage stage = (Stage) borderPane.getScene().getWindow();
+            viewFactory.closeStage(stage);
+            viewFactory.showLoginWindow();
+        }
+//        System.out.println("OK");
     }
 }

@@ -28,5 +28,7 @@
             <Font size="10.0" />
          </font>
       </Button>
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#onBack" prefHeight="5.0" text="Back" />
+      <Label fx:id="connectionStatus" alignment="CENTER" layoutX="50.0" layoutY="96.0" prefWidth="300.0" />
    </children>
 </AnchorPane>

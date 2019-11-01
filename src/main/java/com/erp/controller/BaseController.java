@@ -9,6 +9,10 @@ public class BaseController {
 
     protected String fxmlName;
 
+    BaseController() {
+
+    }
+
     BaseController(ViewFactory viewFactory, String fxmlName) {
         this.viewFactory = viewFactory;
         this.fxmlName = fxmlName;
