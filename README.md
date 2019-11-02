@@ -1,4 +1,4 @@
-# Semester 3 Java Project :exclamation: still under development :exclamation: :start:
+# Semester 3 Java Project :exclamation: still under development :exclamation: :star:
 The aim of this project is to redesign the workflow of the college system.
     
 ## NOTE
