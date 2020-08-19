@@ -1,4 +1,5 @@
-# Semester 3 Java Project :exclamation: still under development :exclamation:
+# Semester 3 Java Project
+CS Semester 3 project using javaFX/JSBC and JPheonix libraries. 
     
 ## NOTE
 This project is built in Netbeans IDE(Migrating to Intellij)
